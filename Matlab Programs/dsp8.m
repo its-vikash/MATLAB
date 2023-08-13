@@ -1,0 +1,13 @@
+N=input('Type the filter order=');
+f=input('Type the band edge=');
+m=input('Type the magnitude value=');
+b=remez(N, f, m);
+disp('FIR filter coefficients');
+disp(b);
+[h,w]=freqz(b,1,256);
+mag=20*log10(abs(h));
+plot(w/pi,mag);
+grid;
+xlabel('Normalised frequency');
+ylabel('gain (db)');
+title('Equiripple FIR filter - Aman Chaudhary');

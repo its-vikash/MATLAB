@@ -1,0 +1,11 @@
+a=input('Enter the real part a=');
+b=input('Enter the imaginary part b=');
+k=input('constant k=');
+x=input('variable x=');
+c=a+i*b;
+y=k*c.^x;
+disp(imag(y));
+stem(x,imag(y));
+xlabel('Frequency');
+ylabel('Amplitude');
+title('Imaginary part of sequence - Vikash Patel');
